@@ -1,13 +1,13 @@
-import { Layout } from "antd";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Layout } from 'antd';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
-import useBreakpoint from "../../hooks/useBreakpoint";
-import LayoutDrawer from "../components/LayoutDrawer/LayoutDrawer";
-import LayoutFooter from "../components/LayoutFooter/LayoutFooter";
-import LayoutHeader from "../components/LayoutHeader/LayoutHeader";
-import LayoutMenu from "../components/LayoutMenu/LayoutMenu";
-import ResizableSidebar from "../utilities/ResizableSidebar";
+import useBreakpoint from '../../hooks/useBreakpoint';
+import LayoutDrawer from '../components/LayoutDrawer/LayoutDrawer';
+import LayoutFooter from '../components/LayoutFooter/LayoutFooter';
+import LayoutHeader from '../components/LayoutHeader/LayoutHeader';
+import LayoutMenu from '../components/LayoutMenu/LayoutMenu';
+import ResizableSidebar from '../utilities/ResizableSidebar';
 
 const SIDEBAR_EXPANDED_WIDTH = 270;
 const SIDEBAR_COLLAPSED_WIDTH = 80;
@@ -58,23 +58,23 @@ const MainLayout: React.FC = () => {
   }, [collapsed, lg, md, siderWidth, sm, xl, xs]);
 
   return (
-    <Layout hasSider style={{ minHeight: "100vh" }}>
+    <Layout hasSider style={{ minHeight: '100vh' }}>
       <Layout.Sider
         width={siderWidth}
         style={{
-          position: "fixed",
-          userSelect: "none",
+          position: 'fixed',
+          userSelect: 'none',
           top: 0,
           left: 0,
           bottom: 0,
-          zIndex: "auto",
-          overflowY: "auto",
-          scrollbarWidth: "thin",
-          scrollbarColor: "auto",
-          scrollBehavior: "smooth",
-          padding: "0 8px",
+          zIndex: 'auto',
+          overflowY: 'auto',
+          scrollbarWidth: 'thin',
+          scrollbarColor: 'auto',
+          scrollBehavior: 'smooth',
+          // padding: "0 8px",
         }}
-        breakpoint="lg"
+        breakpoint='lg'
         trigger={null}
         collapsedWidth={xs ? 0 : SIDEBAR_COLLAPSED_WIDTH}
         collapsible
@@ -97,7 +97,7 @@ const MainLayout: React.FC = () => {
       <Layout
         style={{
           marginLeft: marginLeft,
-          transition: "margin-left 0.2s ease",
+          transition: 'margin-left 0.2s ease',
         }}
       >
         <LayoutHeader
@@ -107,7 +107,7 @@ const MainLayout: React.FC = () => {
           handleOpen={handleOpen}
         />
 
-        <Layout.Content style={{ padding: "1.5em" }}>
+        <Layout.Content style={{ padding: '1.5em' }}>
           <Outlet />
         </Layout.Content>
 

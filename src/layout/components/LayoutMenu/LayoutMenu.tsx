@@ -23,12 +23,18 @@ const LayoutMenu: React.FC<Props> = ({ collapsed }) => {
       }}
     >
       <div>
-        <TopSection collapsed={collapsed} />
+        <div
+          style={{ borderBottom: '1px solid rgb(98 98 107)', marginTop: '5px' }}
+        >
+          <TopSection collapsed={collapsed} />
+        </div>
+
         <Menu
           mode='inline'
           items={navigationMenu.map(renderMenuItem)}
           selectedKeys={[location.pathname]}
           defaultOpenKeys={defaultOpenKeys}
+          style={{ paddingLeft: 5, paddingRight: 5 }}
         />
       </div>
       <BottomSection collapsed={collapsed} />

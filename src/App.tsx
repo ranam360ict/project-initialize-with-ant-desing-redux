@@ -66,7 +66,13 @@ const App: React.FC = () => {
             algorithm: true,
             itemMarginInline: 0,
           },
-
+          Tag: {
+            colorText: 'rgb(22 101 52)',
+            colorBgContainer: 'rgb(220 252 231)',
+            colorPrimaryBorder: 'green',
+            colorBorder: '#00000000',
+            borderRadius: 30,
+          },
           Table: {
             headerBg: 'rgb(66 128 239 / 0.05)',
             algorithm: true,
